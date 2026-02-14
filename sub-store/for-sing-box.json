@@ -432,22 +432,22 @@
       {
         "tag": "MY_PT",
         "type": "remote",
-        "url": "https://raw.githubusercontent.com/SagerNet/sing-geosite/refs/heads/rule-set/geosite-openai.srs",
-        "format": "binary",
+        "url": "https://raw.githubusercontent.com/Ssssix40/clash_config/refs/heads/main/ruleset/my_pt.json",
+        "format": "source",
         "download_detour": "🚀 节点选择"
       },
       {
         "tag": "MY_direct",
         "type": "remote",
-        "url": "https://raw.githubusercontent.com/SagerNet/sing-geosite/refs/heads/rule-set/geosite-openai.srs",
-        "format": "binary",
+        "url": "https://raw.githubusercontent.com/Ssssix40/clash_config/refs/heads/main/ruleset/my_direct.json",
+        "format": "source",
         "download_detour": "🚀 节点选择"
       },
       {
         "tag": "MY_CUSTOM_PROXY",
         "type": "remote",
-        "url": "https://raw.githubusercontent.com/SagerNet/sing-geosite/refs/heads/rule-set/geosite-openai.srs",
-        "format": "binary",
+        "url": "https://raw.githubusercontent.com/Ssssix40/clash_config/refs/heads/main/ruleset/my_proxy.json",
+        "format": "source",
         "download_detour": "🚀 节点选择"
       },
       {
