@@ -26,6 +26,7 @@
       { "clash_mode": "global", "server": "fakeip" },
       { "query_type": "HTTPS", "action": "reject" },
       { "rule_set": "geosite-fakeipfilter", "server": "local" },
+      { "rule_set": "geosite-category-games@cn", "server": "local" },
       { "query_type": ["A", "AAAA"], "server": "fakeip", "rewrite_ttl": 1 },
       { "rule_set": "geosite-cn", "server": "local" }
     ],
@@ -211,18 +212,18 @@
         "🏁 其他节点-手动"
       ]
     },
-    { "tag": "🇭🇰 香港手动", "type": "selector", "outbounds": [] },
-    { "tag": "🇨🇳 台湾手动", "type": "selector", "outbounds": [] },
-    { "tag": "🇯🇵 日本手动", "type": "selector", "outbounds": [] },
-    { "tag": "🇰🇷 韩国手动", "type": "selector", "outbounds": [] },
-    { "tag": "🇸🇬 狮城手动", "type": "selector", "outbounds": [] },
-    { "tag": "🇺🇲 美国手动", "type": "selector", "outbounds": [] },
-    { "tag": "🐸 手动选择", "type": "selector", "outbounds": [] },
-    { "tag": "♻️ 自动选择", "type": "urltest", "outbounds": [] },
-    { "tag": "🏁 其他节点-手动", "type": "selector", "outbounds": [] },
-    { "tag": "🎥 奈飞节点", "type": "selector", "outbounds": [] },
-    { "tag": "🛖 家宽节点-手动", "type": "selector", "outbounds": [] },
-    { "tag": "🛖 家宽节点-自动", "type": "urltest", "outbounds": [] },
+    { "tag": "🇭🇰 香港手动", "type": "selector", "outbounds": ["🎯 全球直连"] },
+    { "tag": "🇨🇳 台湾手动", "type": "selector", "outbounds": ["🎯 全球直连"] },
+    { "tag": "🇯🇵 日本手动", "type": "selector", "outbounds": ["🎯 全球直连"] },
+    { "tag": "🇰🇷 韩国手动", "type": "selector", "outbounds": ["🎯 全球直连"] },
+    { "tag": "🇸🇬 狮城手动", "type": "selector", "outbounds": ["🎯 全球直连"] },
+    { "tag": "🇺🇲 美国手动", "type": "selector", "outbounds": ["🎯 全球直连"] },
+    { "tag": "🐸 手动选择", "type": "selector", "outbounds": ["🎯 全球直连"] },
+    { "tag": "♻️ 自动选择", "type": "urltest", "outbounds": ["🎯 全球直连"] },
+    { "tag": "🏁 其他节点-手动", "type": "selector", "outbounds": ["🎯 全球直连"] },
+    { "tag": "🎥 奈飞节点", "type": "selector", "outbounds": ["🎯 全球直连"] },
+    { "tag": "🛖 家宽节点-手动", "type": "selector", "outbounds": ["🎯 全球直连"] },
+    { "tag": "🛖 家宽节点-自动", "type": "urltest", "outbounds": ["🎯 全球直连"] },
     { "tag": "🛑 广告拦截", "type": "selector", "outbounds": ["block", "🎯 全球直连"] },
     { "tag": "📢 谷歌FCM", "type": "selector", "outbounds": ["🎯 全球直连", "🚀 默认代理", "🇭🇰 香港手动", "🇨🇳 台湾手动", "🇸🇬 狮城手动", "🇯🇵 日本手动", "🇺🇲 美国手动"] },
     {
@@ -294,6 +295,7 @@
       { "rule_set": "geosite-netflix", "outbound": "🎥 Netflix" },
       { "rule_set": "geosite-paypal", "outbound": "💶 PayPal" },
       { "rule_set": "geosite-steamcn", "outbound": "🎯 全球直连" },
+      { "rule_set": "geosite-category-games@cn", "outbound": "🎯 全球直连" },
       { "rule_set": "geosite-steam", "outbound": "🎮 Steam" },
       { "rule_set": "geosite-!cn", "outbound": "🚀 默认代理" },
       { "rule_set": "geosite-cn", "outbound": "🎯 全球直连" },
@@ -436,6 +438,13 @@
         "type": "remote",
         "format": "binary",
         "url": "https://gh-proxy.com/https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/sing/geo/geosite/steam.srs",
+        "download_detour": "🎯 全球直连"
+      },
+      {
+        "tag": "geosite-category-games@cn",
+        "type": "remote",
+        "format": "binary",
+        "url": "https://gh-proxy.com/https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/sing/geo/geosite/category-games@cn.srs",
         "download_detour": "🎯 全球直连"
       },
       {
