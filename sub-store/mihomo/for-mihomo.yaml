@@ -40,6 +40,21 @@ proxy-groups:
       - 香港节点
       - 手动切换
       - DIRECT
+  - name: MyAI
+    icon: https://testingcf.jsdelivr.net/gh/Koolson/Qure@master/IconSet/Color/AI.png
+    type: select
+    proxies:
+      - 节点选择
+      - 自动选择
+      - AI-UNHK
+      - 狮城节点
+      - 台湾节点
+      - 日本节点
+      - 美国节点
+      - 韩国节点
+      - 香港节点
+      - 手动切换
+      - DIRECT
   - name: 手动切换
     icon: https://testingcf.jsdelivr.net/gh/shindgewongxj/WHATSINStash@master/icon/select.png
     include-all: true
@@ -387,6 +402,13 @@ rule-providers:
     interval: 86400
     format: text
     type: http
+  my_ai:
+    url: https://raw.githubusercontent.com/Ssssix40/clash_config/refs/heads/main/ruleset/mihomo/my_ai.list
+    path: ./ruleset/my_ai.list
+    behavior: classical
+    interval: 86400
+    format: text
+    type: http
   LocalAreaNetwork:
     url: https://testingcf.jsdelivr.net/gh/ACL4SSR/ACL4SSR@master/Clash/LocalAreaNetwork.list
     path: ./ruleset/LocalAreaNetwork.list
@@ -606,6 +628,7 @@ rule-providers:
     type: http
 
 rules:
+  - "RULE-SET,my_ai,MyAI"
   - "RULE-SET,my_direct,全球直连"
   - "RULE-SET,my_proxy,MyProxy"
   - "RULE-SET,my_pt,MyPT"
