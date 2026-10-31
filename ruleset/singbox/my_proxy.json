@@ -2,6 +2,7 @@
   "version": 1,
   "rules": [
     {
+      "domain": ["media.micu.hk"],
       "domain_suffix": [
         "emby.m78tv.com"
       ]

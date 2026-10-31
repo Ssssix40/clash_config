@@ -628,10 +628,9 @@ rule-providers:
     type: http
 
 rules:
-  - "DOMAIN,media.micu.hk,MyProxy"
   - "RULE-SET,my_ai,MyAI"
-  - "RULE-SET,my_direct,全球直连"
   - "RULE-SET,my_proxy,MyProxy"
+  - "RULE-SET,my_direct,全球直连"
   - "RULE-SET,my_pt,MyPT"
   - "RULE-SET,LocalAreaNetwork,全球直连"
   - "RULE-SET,UnBan,全球直连"
