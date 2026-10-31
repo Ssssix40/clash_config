@@ -96,7 +96,7 @@
         "outbound": "direct"
       },
       {
-        "domain": ["media.micu.hk"],
+        "rule_set": "my_proxy",
         "action": "route",
         "outbound": "my_proxy"
       },
@@ -104,11 +104,6 @@
         "rule_set": "my_direct",
         "action": "route",
         "outbound": "direct"
-      },
-      {
-        "rule_set": "my_proxy",
-        "action": "route",
-        "outbound": "my_proxy"
       },
       {
         "rule_set": "my_pt",
